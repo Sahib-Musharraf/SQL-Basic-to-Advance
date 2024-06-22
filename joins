@@ -1,0 +1,25 @@
+Question:
+
+You have two tables: orders and customers. The orders table has the following columns:
+
+Column Name	Data Type
+order_id	int
+customer_id	int
+order_date	date
+total_amount	decimal
+The customers table has the following columns:
+
+Column Name	Data Type
+customer_id	int
+customer_name	varchar
+email	varchar
+address	varchar
+Write a SQL query to retrieve the customer_name and total_amount for each order.
+
+
+Solution ;
+
+SELECT customer_name, total_amount
+FROM orders
+JOIN customers
+ON orders.customer_id = customers.customer_id;
